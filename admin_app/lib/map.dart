@@ -1,7 +1,6 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:google_maps_flutter/google_maps_flutter.dart';
-import 'package:flutter_polyline_points/flutter_polyline_points.dart';
 import 'package:google_nav_bar/google_nav_bar.dart';
 import 'package:location/location.dart';
 
@@ -29,20 +28,20 @@ class _MapPageState extends State<MapPage> {
     getLocationUpdates();
   }
 
-  int _selectedIndex = 0; // Set default index to 0 for "Home"
+  final int _selectedIndex = 0; // Set default index to 0 for "Home"
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        color: const Color(0xFF797E44),
+        color: const Color(0xFF6962AD),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 20),
           child: GNav(
-            backgroundColor: const Color(0xFF797E44),
-            color: const Color(0xFFEDE885),
-            activeColor: const Color(0xFFEDE885),
-            tabBackgroundColor: const Color(0xFFA1A364),
+            backgroundColor: const Color(0xFF6962AD),
+            color: const Color(0xFF000000),
+            activeColor: const Color(0xFF000000),
+            tabBackgroundColor: const Color(0xFF83C0C1),
             gap: 45,
             padding: const EdgeInsets.all(16),
             selectedIndex: _selectedIndex, // Set active index to 0

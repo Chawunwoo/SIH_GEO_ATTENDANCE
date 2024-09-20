@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:gail_admin/details.dart';
+import 'package:gail_admin/leave.dart';
 import 'package:gail_admin/login.dart';
+import 'package:gail_admin/mapp.dart';
 
 void main() {
   runApp(const MyApp());
@@ -19,14 +21,16 @@ class _MyAppState extends State<MyApp> {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       theme: ThemeData(
-        primarySwatch: Colors.blueGrey,
-        brightness: Brightness.dark,
+        scaffoldBackgroundColor: const Color(0xFF624E88),
+        primaryColor: const Color(0xFF8967B3),
       ),
-      darkTheme: ThemeData.dark(),
       initialRoute: 'login',
       routes: {
         'login': (context) => const MyLogin(),
-        'details': (context) => const MyDetails()
+        'details': (context) => const MyDetails(),
+        'employee_list': (context) => const MyDetails(),
+        'map': (context) => const MyMapPage(0),
+        'leave': (context) => const LeavePage(0),
       },
     );
   }
